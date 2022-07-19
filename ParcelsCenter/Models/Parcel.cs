@@ -29,6 +29,21 @@ namespace ParcelsCenter.Models
       _instances.Clear();
     }
 
+    public double Volume()
+    {
+      double Volume = Width * Height * Length;
+      return Volume;
+    }
+
+    public double CostToShip()
+    {
+      double volumeCost;
+      double weightCost; 
+      weightCost = Weight * 2;
+      volumeCost = 20;
+      double costToShip = weightCost + volumeCost;
+      return costToShip;
+    }
     
   }
 }
