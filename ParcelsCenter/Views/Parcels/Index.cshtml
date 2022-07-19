@@ -8,5 +8,14 @@
   <body>
     @using ParcelsCenter.Models;
     
+    <h1>Your Packages:</h1>
+    <ul>
+      @foreach (Parcel parcel in Model)
+      {
+        <li>@parcel.Height " * @parcel.Width " * @parcel.Length "</li>
+        <li>@parcel.Weight lbs</li>
+      }
+    </ul>
+    <a href="/parcels/new">Add another parcel</a>
   </body>
 </html>

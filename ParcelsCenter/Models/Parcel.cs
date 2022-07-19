@@ -1,14 +1,20 @@
+using System.Collections.Generic;
+
 namespace ParcelsCenter.Models
 {
   public class Parcel
   {
-    public string Dimensions { get; set; }
-    public int Weight { get; set; }
+    public double Width { get; set; }
+    public double Height { get; set; }
+    public double Length { get; set; }
+    public double Weight { get; set; }
     private static List<Parcel> _instances = new List<Parcel> {};
 
-    public Parcel(string dimensions, int weight)
+    public Parcel(double width, double height, double length, double weight)
     {
-      Dimensions = dimensions;
+      Width = width;
+      Height = height;
+      Length = length;
       Weight = weight;
       _instances.Add(this);
     }

@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-
-    
+    <form class ="d-flex flex-row justify-content-center m-4" action="/parcels" method="post">
+      <label for="height">Height</label>
+      <input class="mx-3" id="height" name="height" type="number">
+      <label for="length">Length</label>
+      <input class="mx-3" id="length" name="length" type="number">
+      <label for="width">Width</label>
+      <input class="mx-3" id="width" name="width" type="number">
+      <label class="mx-3" for="weight">Weight</label>
+      <input class="mx-3" id="weight" name="weight" type="number">
+      <button class="btn btn-primary" type="submit">Enter</button>  
+    </form>
   </body>
 </html>
