@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 // using System;
 // using ProjectName.Models;
 
-namespace ProjectName
+namespace ParcelsCenter
 {
   public class Program
   {

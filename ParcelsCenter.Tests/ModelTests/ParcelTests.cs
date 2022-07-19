@@ -1,11 +1,11 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models;
+using Parcels.Models;
 
-namespace ProjectName.Tests
+namespace Parcels.Tests
 {
   [TestClass]
-  public class ClassNameTests // : IDisposable
+  public class ParcelTests // : IDisposable
   {
     // public void Dispose()
     // {
