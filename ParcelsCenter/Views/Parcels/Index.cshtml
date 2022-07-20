@@ -18,16 +18,16 @@
     <ul>
       @foreach (Parcel parcel in Model)
       {
-        <li>@parcel.Length"L X @parcel.Width"W X @parcel.Height"H</li>
-        <li>@parcel.Weight lbs</li>
-        <p>@parcel.Volume() cu in</p>
-        <p>$@parcel.CostToShip() to ship</p>
+        <li>Dimensions: @parcel.Length"L X @parcel.Width"W X @parcel.Height"H</li>
+        <li>Volume: @parcel.Volume() cu in</li>
+        <li>Weight: @parcel.Weight lbs</li>
+        <li>Shipping fee: $@parcel.CostToShip()</li>
       }
     </ul>
     <a href="/parcels/new">Add a new parcel</a>
     <br>
     <br>
-    <form action="/parcles/delete" method="post">
+    <form action="/parcels/delete" method="post">
       <button type="submit" name="button" class="btn btn-danger">Clear All Parcels</button>
     </form>
   </body>

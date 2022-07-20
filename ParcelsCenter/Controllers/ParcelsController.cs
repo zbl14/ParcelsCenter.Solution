@@ -26,7 +26,7 @@ namespace ParcelsCenter.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/items/delete")]
+    [HttpPost("/parcels/delete")]
     public ActionResult DeleteAll()
     {
       Parcel.ClearAll();
