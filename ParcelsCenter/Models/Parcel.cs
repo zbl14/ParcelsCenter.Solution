@@ -10,11 +10,11 @@ namespace ParcelsCenter.Models
     public double Weight { get; set; }
     private static List<Parcel> _instances = new List<Parcel> {};
 
-    public Parcel(double width, double height, double length, double weight)
+    public Parcel(double length, double width, double height, double weight)
     {
+      Length = length;
       Width = width;
       Height = height;
-      Length = length;
       Weight = weight;
       _instances.Add(this);
     }
@@ -31,19 +31,17 @@ namespace ParcelsCenter.Models
 
     public double Volume()
     {
-      double Volume = Width * Height * Length;
-      return Volume;
+      double volume = Length * Width * Height;
+      return volume;
     }
 
     public double CostToShip()
     {
-      double volumeCost;
-      double weightCost; 
+      double volumeCost, weightCost; 
       weightCost = Weight * 2;
       volumeCost = 20;
       double costToShip = weightCost + volumeCost;
       return costToShip;
     }
-    
   }
 }

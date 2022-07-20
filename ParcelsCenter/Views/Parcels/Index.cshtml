@@ -2,22 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>Parcel Express</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="container">
     @using ParcelsCenter.Models;
     
-    <h1>Your Packages:</h1>
+    <div class="jumbotron text-center">
+      <h1>List of Packages</h1>
+    </div>
+    @if (Model.Count == 0)
+    {
+      <p>There are no parcels in the list.</p>
+    }
     <ul>
       @foreach (Parcel parcel in Model)
       {
-        <li>@parcel.Height " * @parcel.Width " * @parcel.Length "</li>
+        <li>@parcel.Length"L X @parcel.Width"W X @parcel.Height"H</li>
         <li>@parcel.Weight lbs</li>
         <p>@parcel.Volume() cu in</p>
         <p>$@parcel.CostToShip() to ship</p>
       }
     </ul>
-    <a href="/parcels/new">Add another parcel</a>
+    <a href="/parcels/new">Add a new parcel</a>
+    <br>
+    <br>
+    <form action="/parcles/delete" method="post">
+      <button type="submit" name="button" class="btn btn-danger">Clear All Parcels</button>
+    </form>
   </body>
 </html>

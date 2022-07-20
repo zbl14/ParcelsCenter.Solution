@@ -20,9 +20,16 @@ namespace ParcelsCenter.Controllers
     }
 
     [HttpPost("/parcels")]
-    public ActionResult Create(double width, double height, double length, double weight)
+    public ActionResult Create(double length, double width, double height, double weight)
     {
-      Parcel myParcel = new Parcel(width, height, length, weight);
+      Parcel myParcel = new Parcel(length, width, height, weight);
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost("/items/delete")]
+    public ActionResult DeleteAll()
+    {
+      Parcel.ClearAll();
       return RedirectToAction("Index");
     }
   }
